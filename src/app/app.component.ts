@@ -3,8 +3,12 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { ReservaVueloPage } from '../pages/reserva-vuelo/reserva-vuelo';
+import { ConsultaVueloPage } from '../pages/consulta-vuelo/consulta-vuelo';
+import { InfoLegalPage } from '../pages/info-legal/info-legal';
+import { ContactoPage } from '../pages/contacto/contacto';
+import { FacturarVueloPage } from '../pages/facturar-vuelo/facturar-vuelo';
+import { TarjetaEmbarquePage } from '../pages/tarjeta-embarque/tarjeta-embarque';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +16,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = ReservaVueloPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +25,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title:'Reserva de Vuelo', component: ReservaVueloPage},
+      { title: 'Consulta de Vuelo', component: ConsultaVueloPage},
+      { title: 'Información Legal', component: InfoLegalPage},
+      { title: 'Contacto', component: ContactoPage}
     ];
 
   }

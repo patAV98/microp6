@@ -1,6 +1,8 @@
 {
   "name": "Aerolinea",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
   "id": "518d01c2"
 }

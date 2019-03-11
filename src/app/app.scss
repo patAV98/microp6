@@ -14,3 +14,14 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+header{
+    background-color: red;
+    padding: 16px;
+    color: whitesmoke;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+}
