@@ -1,3 +1,57 @@
 page-reserva-vuelo {
 
+
+/*************************
+****** Buscador **********
+*************************/
+
+#search {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    height: 30px;
+    margin: 0px;
+    font-size: 10px;
+}
+
+input[type="date"] {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    height: 30px;
+    margin: 0px;
+    font-size: 10px;
+    flex-direction: row;
+}
+
+.reservar {
+    background-color: red;
+    height: 40px;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+}
+
+/*************************
+****** Vuelos **********
+*************************/
+
+.infovuelo p{
+    margin-bottom: 15px;
+}
+
+.infovuelo{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 90%;
+    margin-bottom: 15px;
+}
+
 }

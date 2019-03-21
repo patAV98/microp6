@@ -15,4 +15,24 @@
 
 <ion-content padding>
 
+    <header> Vuelos Europeos S.A &nbsp; <i class="fas fa-plane"></i>
+    </header>
+    <body>
+        <ion-list >
+            <ion-item no-lines *ngFor="let avion of vuelos">
+              <ion-item class="infovuelo">
+              <p>
+              <span style="float:left;"><strong>Destino: </strong>{{avion.destino}}</span>
+              <span style="float:right;"><strong>Origen: </strong>{{avion.origen}}</span>
+            </p>
+            <p>
+              <span style="float:left;"><strong>Hora ida: </strong>{{avion.horaida}}</span>
+              <span style="float:right;"><strong>Hora vuelta: </strong>{{avion.horavuelta}}</span>
+            </p>
+            <p><strong>Precio: </strong>{{avion.precio}}€</p>
+            <button ion-button block class="reservar" (click)="onLoadFacturar()">Tarjeta de Embarque</button>
+          </ion-item>
+        </ion-item>
+            </ion-list>
+    </body>
 </ion-content>

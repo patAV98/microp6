@@ -4,6 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
 <ion-header>
   <ion-navbar>
       <button ion-button menuToggle>
@@ -15,6 +16,43 @@
 
 <ion-content padding>
 
-<header> Vuelos Europeos S.A. </header>
+<header> Vuelos Europeos S.A &nbsp; <i class="fas fa-plane"></i>
+</header>
+
+<body>
+  <ion-item no-lines id="search" lines="none">
+    <ion-item>
+      <ion-input class="box" type="text" placeholder="Origen" name="origen" style="width:40%; float:left;"></ion-input>
+      <ion-input class="box" type="text" placeholder="Destino" name="destino" style="width:40%; float:right;"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input class="box placeholderclass" type="date" placeholder="Fecha Ida" name="ida" style="width:50%; float:left;"></ion-input>
+        <ion-input class="box" type="date" placeholder="Fecha Ida" name="ida" style="width:50%; float:right;"></ion-input>
+    </ion-item>
+    <ion-item>
+        <button ion-button block class="reservar" type="submit" (click)="getAllPlanes()">
+          Buscar
+        </button>
+    </ion-item>
+  </ion-item>
+
+  <ion-list >
+      <ion-item no-lines *ngFor="let avion of aviones">
+        <ion-item class="infovuelo">
+        <p>
+        <span style="float:left;"><strong>Destino: </strong>{{avion.destino}}</span>
+        <span style="float:right;"><strong>Origen: </strong>{{avion.origen}}</span>
+      </p>
+      <p>
+        <span style="float:left;"><strong>Hora ida: </strong>{{avion.horaida}}</span>
+        <span style="float:right;"><strong>Hora vuelta: </strong>{{avion.horavuelta}}</span>
+      </p>
+      <p><strong>Precio: </strong>{{avion.precio}}€</p>
+      <button ion-button block class="reservar" (click)="onAddVuelo(avion.value)">RESERVAR</button>
+    </ion-item>
+  </ion-item>
+      </ion-list>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+</body>
 
 </ion-content>

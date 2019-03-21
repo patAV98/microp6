@@ -22,4 +22,9 @@ export class FacturarVueloPage {
     console.log('ionViewDidLoad FacturarVueloPage');
   }
 
+  onAddTarjeta(value:
+    {nombre:string,apellidos:string,movil:string,dni:string}){
+      
+  }
+
 }
