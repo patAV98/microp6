@@ -9,10 +9,33 @@
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-title>contacto</ion-title>
+    <ion-title>Contacto</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <header class="text-center">Contáctanos</header>
 
+  <form>
+    <ion-item class="contactBox">
+      <ion-input class="box" type="text" placeholder="Email" required="true" style="width:30%;"></ion-input>
+    </ion-item>
+    <ion-item class="contactBox">
+      <ion-select placeholder="¿Cuál es tu problema?" interface="popover" required="true">
+        <ion-option value="info">Quiero más información</ion-option>
+        <ion-option value="problemVuelo">Tengo un problema con mi vuelo</ion-option>
+        <ion-option value="problemReserva">Tengo un problema con mi reserva</ion-option>
+        <ion-option value="otro">Otro</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="contactBox">
+      <ion-textarea placeholder="Explícanos a fondo tu problema" required="true"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <button ion-button block type="submit" class="enviar">Enviar</button>
+    </ion-item>
+  </form>
+  <ion-item no-lines>
+    <p class="web">Para más ayuda haz click <a href="#" onclick="window.open('https://aulaglobal.uc3m.es', '_system')">aquí</a></p>
+  </ion-item>
 </ion-content>
