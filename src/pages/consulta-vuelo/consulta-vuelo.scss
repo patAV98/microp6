@@ -1,6 +1,8 @@
 page-consulta-vuelo {
 
-    
+body{
+    padding-right: 32px;
+}
 /*************************
 ****** Vuelos **********
 *************************/
@@ -12,9 +14,23 @@ page-consulta-vuelo {
 .infovuelo{
     border: 1px solid black;
     border-radius: 5px;
-    width: 90%;
+    width: 100%;
     margin-bottom: 15px;
 }
-
+#lista-vuelos{
+    width: 86%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 7%;
+    margin-left: 7%;
+    padding: 0px;
+    padding-right: 0px;
 }
 
+.reservar {
+    background-color: #d50000;
+    height: 40px;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+}
+}

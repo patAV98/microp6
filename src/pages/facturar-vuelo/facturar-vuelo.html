@@ -6,43 +6,38 @@
 -->
 <ion-header>
   <ion-navbar>
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Facturación de Vuelo</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <header> Vuelos Europeos S.A &nbsp; <i class="fas fa-plane"></i>
-    </header>
+  <header> Vuelos Europeos S.A &nbsp; <i class="fas fa-plane"></i>
+  </header>
 
-    <body>
-        <form (ngSubmit)="onAddTarjeta(f.value)" #f="ngForm">
-            <ion-list>
-            <ion-item>
-            <ion-label>Nombre</ion-label>
-            <ion-input type="text" placeholder="Nombre" name="nombre" ngModel
-           required></ion-input>
-            </ion-item>
-            <ion-item>
-            <ion-label>Apellidos</ion-label>
-            <ion-input type="text" placeholder="Apellidos" name="apellidos" ngModel
-           required></ion-input>
-            </ion-item>
-            <ion-item>
-            <ion-label>Número de teléfono</ion-label>
-            <ion-input type="text" placeholder="666666666" name="numero"
-           ngModel></ion-input>
-            </ion-item>
-            <ion-item>
-            <ion-label>Pasaporte</ion-label>
-            <ion-input type="text" placeholder="00000000A" name="dni"
-           ngModel></ion-input>
-            </ion-item>
-            </ion-list>
-            <button ion-button block type="submit"
-           [disabled]="!f.valid">Recibir tarjeta de embarque</button>
-           </form>
-    </body>
+  <body>
+    <form (ngSubmit)="onAddTarjeta(f.value)" #f="ngForm">
+      <ion-list>
+        <ion-item>
+          <ion-label>Nombre</ion-label>
+          <ion-input type="text" placeholder="Nombre" name="nombre" ngModel required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Apellidos</ion-label>
+          <ion-input type="text" placeholder="Apellidos" name="apellidos" ngModel required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Número de teléfono</ion-label>
+          <ion-input type="text" placeholder="666666666" name="numero" ngModel></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Pasaporte</ion-label>
+          <ion-input type="text" placeholder="00000000A" name="dni" ngModel></ion-input>
+        </ion-item>
+      </ion-list>
+      <button ion-button block class="embarque" type="submit" [disabled]="!f.valid">Recibir tarjeta de embarque</button>
+    </form>
+  </body>
 </ion-content>
