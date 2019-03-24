@@ -11,6 +11,10 @@ page-reserva-vuelo {
     width: 90%;
     margin-top: 10px;
     margin-bottom: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 0px;
+    padding-right: 0px;
 }
 
 input[type="text"] {
@@ -33,12 +37,21 @@ input[type="date"] {
 }
 
 .reservar {
-    background-color: red;
+    background-color: #d50000;
     height: 40px;
     font-size: 22px;
     font-family: 'Lato', sans-serif;
 }
+body{
+    padding-right: 32px;
+}
+.item-md.item-block .item-inner{
+    padding:0px;
+}
 
+.label-md{
+    margin-right: 0;
+}
 /*************************
 ****** Vuelos **********
 *************************/
@@ -47,11 +60,20 @@ input[type="date"] {
     margin-bottom: 15px;
 }
 
+#lista-vuelos{
+    width: 86%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 7%;
+    margin-left: 7%;
+    padding: 0px;
+    padding-right: 0px;
+}
 .infovuelo{
     border: 1px solid black;
     border-radius: 5px;
-    width: 90%;
-    margin-bottom: 15px;
+    width: 100%;
+    padding:0px 16px;
 }
 
 }
