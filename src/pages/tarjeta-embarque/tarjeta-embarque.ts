@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Tarjeta } from "../../models/tarjeta.model";
+import { TarjetaService } from '../../services/tarjeta.service';
+
 
 /**
  * Generated class for the TarjetaEmbarquePage page.
@@ -15,8 +18,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TarjetaEmbarquePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  tarjetas: Tarjeta[] = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, private TarjetaService: TarjetaService) {
   }
+
+
+  getAllCards(){
+    this.tarjetas = this.TarjetaService.getTarjetas();
+  } 
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TarjetaEmbarquePage');
