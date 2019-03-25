@@ -7,4 +7,5 @@ export interface Avion {
     horaida: string;
     horavuelta: string;
     precio: number;
+    facturar: string;
 }

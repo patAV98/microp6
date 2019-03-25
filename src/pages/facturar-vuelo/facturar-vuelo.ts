@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TarjetaService } from '../../services/tarjeta.service';
+import { TarjetaEmbarquePage } from '../tarjeta-embarque/tarjeta-embarque';
 
 /**
  * Generated class for the FacturarVueloPage page.
@@ -15,7 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FacturarVueloPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private TarjetaService: TarjetaService) {
   }
 
   ionViewDidLoad() {
@@ -24,7 +26,8 @@ export class FacturarVueloPage {
 
   onAddTarjeta(value:
     {nombre:string,apellidos:string,movil:string,dni:string}){
-      
+      this.TarjetaService.addTarjeta(value);
+      this.navCtrl.push(TarjetaEmbarquePage);
   }
 
 }

@@ -5,6 +5,7 @@ import { AvionService } from '../../services/avion.service';
 import { FacturarVueloPage } from '../facturar-vuelo/facturar-vuelo';
 import { Tarjeta } from "../../models/tarjeta.model";
 import { TarjetaService } from '../../services/tarjeta.service';
+import { TarjetaEmbarquePage } from '../tarjeta-embarque/tarjeta-embarque';
 
 /**
  * Generated class for the ConsultaVueloPage page.
@@ -34,11 +35,13 @@ export class ConsultaVueloPage {
     this.vuelos = this.AvionService.getVuelos();
   }
 
-  onLoadFacturar(){
-    this.navCtrl.push(FacturarVueloPage);
+  onLoadFacturar(value: String){
+    if(value == "Facturar"){
+      this.navCtrl.push(FacturarVueloPage);
+    }
+    else{
+      this.navCtrl.push(TarjetaEmbarquePage);
+    }
   }
-  getAllCards(){
-    this.tarjetas = this.TarjetaService.getTarjetas();
-  } 
 
 }

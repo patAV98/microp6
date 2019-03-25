@@ -14,6 +14,7 @@ import { TarjetaEmbarquePage } from '../pages/tarjeta-embarque/tarjeta-embarque'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AvionService } from '../services/avion.service';
+import { TarjetaService } from '../services/tarjeta.service';
 import { Services } from '@angular/core/src/view';
 
 
@@ -44,7 +45,7 @@ import { Services } from '@angular/core/src/view';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}, AvionService
+    {provide: ErrorHandler, useClass: IonicErrorHandler}, AvionService, TarjetaService
   ]
 })
 export class AppModule {}

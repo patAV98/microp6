@@ -31,4 +31,10 @@ export class TarjetaEmbarquePage {
     console.log('ionViewDidLoad TarjetaEmbarquePage');
   }
 
+  ionViewWillEnter(){
+    this.tarjetas = this.TarjetaService.getTarjetas();
+  }
+
+  
+
 }

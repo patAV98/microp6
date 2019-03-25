@@ -31,11 +31,11 @@
             <span style="float:right;"><strong>Hora vuelta: </strong>{{avion.horavuelta}}</span>
           </p>
           <p><strong>Precio: </strong>{{avion.precio}}€</p>
-          <button ion-button block class="reservar" (click)="onLoadFacturar()">Tarjeta de Embarque</button>
+          <button ion-button block class="reservar" (click)="onLoadFacturar([avion.facturar])">{{avion.facturar}}</button>
         </ion-item>
       </ion-item>
     </ion-list>
-    <ion-list id="lista-tarjetas">
+    <!--<ion-list id="lista-tarjetas">
       <ion-item no-lines *ngFor="let card of tarjetas">
         <ion-item class="infoTarjeta">
           <p>
@@ -54,6 +54,6 @@
           </p>
         </ion-item>
       </ion-item>
-    </ion-list>
+    </ion-list>-->
   </body>
 </ion-content>
