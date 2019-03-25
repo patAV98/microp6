@@ -35,5 +35,25 @@
         </ion-item>
       </ion-item>
     </ion-list>
+    <ion-list id="lista-tarjetas">
+      <ion-item no-lines *ngFor="let card of tarjetas">
+        <ion-item class="infoTarjeta">
+          <p>
+            <span style="float:left;"><strong>Nombre: </strong>{{tarjetas.nombre}}</span>
+            <span style="float: right;"><strong>Asiento: </strong>{{tarjetas.asiento}}</span>
+          </p>
+          <p>
+            <span style="float:left;"><strong>Grupo: </strong>{{tarjetas.grupo}}</span>
+            <span style="float:left;"><img src="" alt="QR"></span>
+          </p>
+          <p>
+            <span style="float:left;"><strong>Puerta: </strong>{{tarjetas.puerta}}</span>
+          </p>
+          <p>
+            <span style="float:left;"><strong>Hora: </strong>{{tarjetas.hora}}</span>
+          </p>
+        </ion-item>
+      </ion-item>
+    </ion-list>
   </body>
 </ion-content>

@@ -26,6 +26,25 @@ body{
     padding: 0px;
     padding-right: 0px;
 }
+#lista-tarjetas{
+    width: 86%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 7%;
+    margin-left: 7%;
+    padding: 0px;
+    padding-right: 0px;
+}
+.infoTarjeta p{
+    margin-bottom: 15px;
+}
+
+.infoTarjeta{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
 
 .reservar {
     background-color: #d50000;
